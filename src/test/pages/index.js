@@ -1,0 +1,20 @@
+module.exports = {
+  BasePage: require('./base_page'),
+  BasketPage: require('./basket_page'),
+  BasketPage: require('./ethan_buy/basket_page'),
+  BillSummaryPage: require('./bill_summary_page'),
+  BuyPage: require('./ethan_buy/buy_page'),
+  ConfiguratorPage: require('./configurator_page'),
+  CounterOfferPage: require('./counter_offer_page'),
+  CrossSellPage: require('./cross_sell_page'),
+  GatewayPage: require('./gateway_page'),
+  HomePage: require('./home_page'),
+  IdentifyYourselfPage: require('./ethan_buy/identify_yourself_page'),
+  LoginPage: require('./login_page'),
+  LookingToLeavePage: require('./looking_to_leave_page'),
+  OrderConfirmationPage: require('./order_confirmation_page'),
+  OrderSummaryPage: require('./order_summary_page'),
+  RewardListPage: require('./ethan_buy/reward_list_page'),
+  RoseAddOnsPage: require('./rose_add_ons_page'),
+  RoseEnhancementsPage: require('./pre_reg_page.js')
+};

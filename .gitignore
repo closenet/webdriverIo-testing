@@ -1,0 +1,17 @@
+DS_Store
+dist/
+node_modules/
+npm-debug.log
+.nyc_output
+/src/public/
+shop-ui-tests.iml
+.vscode
+coverage
+dist
+screenshots/
+.idea/
+errorShots/
+allure-reports/
+public
+0.16.1-x64-geckodriver
+selenium-server-standalone-3.4.0.jar
