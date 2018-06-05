@@ -17,5 +17,5 @@ module.exports = {
     WEBDRIVER_CONFIG: path.resolve(TEST_ROOT, './wdio.conf.js'),
     ENVNAME: process.env.MY_ENV || 'e02',
     BROWSERNAME: (process.env._BROWSER || process.env.BROWSER || 'chrome').replace(/_/g, ' '),
-    TIMEOUT: 30000000
+    TIMEOUT: 300000
 };

@@ -22,11 +22,12 @@ Feature: ROI customers will get into the pre-reg form to get them
     Then submits the form
     And verify message to thanks the customer Thanks, Sky Fibre to the Home is now just around the corner.
 
+
   Scenario: agent register customer interest in FTTH in the pre-reg form successfully
     Given agent directed to the agent page
     When enters the following personal details by agent
       | agentId | channel | callType | accountNumber | isExsiting | firstName | lastName  | email             | phone        | eircode  |
-      | 12345   | web     | urgent   | 430008195116  | yes        | Mohammed  | Al-Nuaimi | test@prereg.co.uk | 011133325114 | A65 F4E2 |
+      | 111111   | web     | urgent   | 430008195116  | yes        | Mohammed  | Al-Nuaimi | test@prereg.co.uk | 011133325114 | A65 F4E2 |
     Then submits the form
     And verify message to thanks the customer Thanks, Sky Fibre to the Home is now just around the corner.
 

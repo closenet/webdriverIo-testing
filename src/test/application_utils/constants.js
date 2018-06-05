@@ -13,7 +13,24 @@ module.exports = Object.freeze({
             PASSWORD: 'test1234'
         },
         BROADBAND: {
-            USERNAME: '621183983223@enE02PR.com',
+            USERNAME: '621142749285.mrE02PR@sky.uk',
+            PASSWORD: 'test1234'
+        },
+        BROADBAND_OFFER_TO_CANCEL:{
+            USERNAME: 'package',
+            PASSWORD: 'test1234'
+        },
+        FIBRE_OFFER_TO_CANCEL:{
+            USERNAME: 'bbfibre3@yahoo.com',
+            PASSWORD: 'test1234'
+        },
+        TRIPLE_PLAY_OFFER_TO_CANCEL: {
+            USERNAME: '621345489861.bbE05PR@sky.uk',
+            PASSWORD: 'test1234'
+        },
+
+        TV_ELIGIBLE_TO_WINBACK: {
+            USERNAME: '621350702208.wbE05PR@sky.uk',
             PASSWORD: 'test1234'
         },
         TV_WITH_CINEMA: {
@@ -64,70 +81,102 @@ module.exports = Object.freeze({
             USERNAME: '621193390625@swE02PR.com',
             PASSWORD: 'test1234'
         },
-      DEEPLINK_TV_ONLY: {
-        USERNAME: '621200518531@ynE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_HD_BOX: {
-        USERNAME: '621196672961@snE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_KIDS_HD_BOX: {
-        USERNAME: '621196869534@swE02SA.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_BOXSETS_HD_BOX: {
-        USERNAME: '621200518556@ynE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_HD: {
-        USERNAME: '621200518572@ynE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_KIDS_SPORTS: {
-        USERNAME: '621200518598@ynE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_BOXSETS_SPORTS: { // CRICKET & F1
-        USERNAME: '621197285623@enE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_HD_SPORTS: {
-        USERNAME: '621200518614@ynE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_SD_SPORTS_GET_IT_ALL: {
-        USERNAME: '621135712803@ynE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_ORIGINAL: {
-        USERNAME: '621191288508@ynE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_VARIETY: {
-        USERNAME: '621193170993@ynE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_VARIETY_HDSUB: { // CRICKET PLUS MULTIROOM PLUS HD_SUB
-        USERNAME: '630004310193@enE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BOXSETS: { // ALSO CINEMA CONTRACT
-        USERNAME: '621193079418@enE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_BOXSETS_CRICKET_F1_HD_BOX: {
-        USERNAME: '621197285623@enE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_KIDS_HD: {
-        USERNAME: '621196672441@snE02PR.com',
-        PASSWORD: 'test1234'
-      },
-      DEEPLINK_BIG_BASICS_KIDS_ALLROSEADDONS_CINEMA_CRICKET_HD_BOX: {
-        USERNAME: '621196672425@snE02PR.com',
-        PASSWORD: 'test1234'
-      },
+        DEEPLINK_TV_ONLY: {
+            USERNAME: '621200518531@ynE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_HD_BOX: {
+            USERNAME: '621196672961@snE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_KIDS_HD_BOX: {
+            USERNAME: '621196869534@swE02SA.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_BOXSETS_HD_BOX: {
+            USERNAME: '621200518556@ynE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_HD: {
+            USERNAME: '621200518572@ynE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_KIDS_SPORTS: {
+            USERNAME: '621200518598@ynE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_BOXSETS_SPORTS: { // CRICKET & F1
+            USERNAME: '621197285623@enE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_HD_SPORTS: {
+            USERNAME: '621200518614@ynE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_SD_SPORTS_GET_IT_ALL: {
+            USERNAME: '621135712803@ynE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_ORIGINAL: {
+            USERNAME: '621191288508@ynE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_VARIETY: {
+            USERNAME: '621193170993@ynE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_VARIETY_HDSUB: { // CRICKET PLUS MULTIROOM PLUS HD_SUB
+            USERNAME: '630004310193@enE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BOXSETS: { // ALSO CINEMA CONTRACT
+            USERNAME: '621193079418@enE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_BOXSETS_CRICKET_F1_HD_BOX: {
+            USERNAME: '621197285623@enE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_KIDS_HD: {
+            USERNAME: '621196672441@snE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        DEEPLINK_BIG_BASICS_KIDS_ALLROSEADDONS_CINEMA_CRICKET_HD_BOX: {
+            USERNAME: '621196672425@snE02PR.com',
+            PASSWORD: 'test1234'
+        },
+        LEGACY_HD_CUSTOMER_WITH_MULTIROOMS: {
+            USERNAME: 'TBC',
+            PASSWORD: 'test1234'
+        },
+        SKY_HDW_CUSTOMER: {
+            USERNAME: '621192657438.swE02PR@sky.uk',
+            PASSWORD: 'test1234'
+        },
+        SKYQ_1TB_CUSTOMER: {
+            USERNAME: '621207315733.moE02PR@sky.uk',
+            PASSWORD: 'test1234'
+        },
+        SKYQ_2TB_CUSTOMER_WITHOUT_MINIBOX: {
+            USERNAME: '621205017471.swE02PR@sky.uk',
+            PASSWORD: 'test1234'
+        },
+        SKYQ_2TB_CUSTOMER_WITH_ONE_MINIBOX: {
+            USERNAME: '621205017489.swE02PR@sky.uk',
+            PASSWORD: 'test1234'
+        },
+        SKYQ_2TB_CUSTOMER_WITH_TWO_MINIBOXES: {
+            USERNAME: '621205017505.swE02PR@sky.uk',
+            PASSWORD: 'test1234'
+        },
+        SKYQ_2TB_CUSTOMER_WITH_THREE_MINIBOXES: {
+            USERNAME: '621205017513.swE02PR@sky.uk',
+            PASSWORD: 'test1234'
+        },
+        SKYQ_2TB_QMS_CUSTOMER_WITH_FOUR_MINIBOXES: {
+            USERNAME: '621205017521.swE02PR@sky.uk',
+            PASSWORD: 'test1234'
+        }
     },
     OOGWAY: {
         BASIC_AUTH: 'Basic dGVzdG5vdHByb2Q6dGVzdG5vdHByb2Q=',

@@ -199,7 +199,7 @@ class RegisterPreRegForFTTH extends Page {
         browser.click(this.eircodeSearchBtn)
     }
 
-    tickIsExistingCustomer (sw){
+    tickIsExistingCustomer (sw, done){
         if (sw === 'yes')
         {
             browser.click(this.existingCustomerYesBtn);
@@ -208,53 +208,64 @@ class RegisterPreRegForFTTH extends Page {
             console.log("NO is received zzzzzzz");
             browser.click(this.existingCustomerNoBtn);
         }
+        done();
     }
 
 
     //enter text into fields agent side
     enterAgentId(agentId) {
-        browser.waitForVisible(this.agentIdBox);
-        browser.addValue(this.agentIdBox, agentId);
+       browser.waitForVisible(this.agentIdBox);
+      browser.addValue(this.agentIdBox, agentId);
     }
+
 
     enterSalesChannel(salesChannel) {
         browser.waitForVisible(this.salesChannelBox);
         browser.addValue(this.salesChannelBox, salesChannel);
+     
     }
 
-    enterCallType(callType) {
+    enterCallType(callType, done) {
         browser.waitForVisible(this.callTypeBox);
         browser.addValue(this.callTypeBox, callType);
+        done;
     }
 
-    enterAccountNumber (accountNumber) {
+    enterAccountNumber (accountNumber, done) {
         browser.waitForVisible(this.accountNumberBox);
         browser.addValue(this.accountNumberBox, accountNumber);
+        done;
     }
 
     enterFirstNameAgent(firstname) {
         browser.waitForVisible(this.firstNameAgentBox);
         browser.addValue(this.firstNameAgentBox, firstname);
+        console.log("xxxxxxxxxxxxxxfirstNamexxxxx  ", browser.getValue(this.firstNameAgentBox));
+
     }
 
-    enterLastNameAgent(lastName) {
+    enterLastNameAgent(lastName, done) {
         browser.waitForVisible(this.lastNameAgentBox);
         browser.addValue(this.lastNameAgentBox, lastName);
+        done;
     }
 
-    enterEmailAgent(email) {
+    enterEmailAgent(email, done) {
         browser.waitForVisible(this.emailAgentBox);
         browser.addValue(this.emailAgentBox, email);
+    done;
     }
 
-    enterMobileNumberAgent(mobileNumber) {
+    enterMobileNumberAgent(mobileNumber, done) {
         browser.waitForVisible(this.mobileAgentBox);
         browser.addValue(this.mobileAgentBox, mobileNumber);
+        done;
     }
 
-    enterEircodeAgent(eircode) {
+    enterEircodeAgent(eircode, done) {
         browser.waitForVisible(this.eirCodeAgentBox);
         browser.addValue(this.eirCodeAgentBox, eircode);
+        done;
     }
 
 

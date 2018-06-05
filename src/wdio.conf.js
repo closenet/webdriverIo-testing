@@ -10,29 +10,34 @@ const config = require('./config');
 
 const browserName = (process.env._BROWSER || process.env.BROWSER || 'chrome').replace(/_/g, ' ');
 const port = process.env.PORT || 3000;
-const chromeBinary = process.env.CHROME_BINARY || '';
+//const chromeBinary = process.env.CHROME_BINARY || '';
 const cucumberOptsTags = process.env.CUCUMBER_OPT_TAGS || '~@wip';
 //const chromeHeadless = process.env.CHROME_HEADLESS || 'headless';
 
-const { SPECS, STEP_DEFINITIONS, TEST_RESULTS, TEST_SCREENSHOTS, TIMEOUT } = config;
-
+const {SPECS, STEP_DEFINITIONS, TEST_RESULTS, TEST_SCREENSHOTS, TIMEOUT} = config;
 
 
 exports.config = {
+    // user: 'closenet',
+    // key: '29a0cb16-7f50-4fc2-92d0-d85731795c3c',
+    // sauceConnect: true,
+    services: ['chromedriver'],
+    port: '9515',
+    path: '/',
     specs: [SPECS],
     exclude: [],
     maxInstances: 1,
     capabilities: [
         {
-            browserName,
+            browserName: 'chrome',
             chromeOptions: {
   //              args:[`${chromeHeadless}`],
-                binary: `${chromeBinary}`
+    //            binary: `${chromeBinary}`
             }
         }
     ],
     sync: true,
-    logLevel: 'data',
+    logLevel: 'verbose',
     coloredLogs: true,
     bail: 0,
     baseUrl: `http://localhost:${port}`,
@@ -40,7 +45,7 @@ exports.config = {
     waitforTimeout: TIMEOUT,
     connectionRetryTimeout: TIMEOUT,
     connectionRetryCount: 0,
-    services: ['selenium-standalone'],
+    //services: ['selenium-standalone'],
     framework: 'cucumber',
     reporters: ['spec', 'allure'],
     reporterOptions: {

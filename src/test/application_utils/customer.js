@@ -1,6 +1,6 @@
 const {
-  CUSTOMER_TYPE,
-  CUSTOMER
+    CUSTOMER_TYPE,
+    CUSTOMER
 } = require('./constants');
 
 class Customer {
@@ -85,11 +85,53 @@ class Customer {
       case 'Deeplink Variety':
         customerCredentials = CUSTOMER.DEEPLINK_VARIETY;
         break;
-        case 'Deeplink Variety HD':
+      case 'Deeplink Variety HD':
         customerCredentials = CUSTOMER.DEEPLINK_VARIETY_HDSUB;
         break;
       case 'Deeplink BoxSets':
         customerCredentials = CUSTOMER.DEEPLINK_BOXSETS;
+        break;
+      case 'LEGACY_HD_CUSTOMER':
+        customerCredentials = CUSTOMER.LEGACY_HD_CUSTOMER;
+        break;
+      case 'LEGACY_HD_CUSTOMER_WITH_MULTIROOMS':
+        customerCredentials = CUSTOMER.LEGACY_HD_CUSTOMER_WITH_MULTIROOMS;
+        break;
+      case 'SKY_HDW_CUSTOMER':
+        customerCredentials = CUSTOMER.SKY_HDW_CUSTOMER;
+        break;
+      case 'SKYQ_1TB_CUSTOMER':
+        customerCredentials = CUSTOMER.SKYQ_1TB_CUSTOMER;
+        break;
+      case 'SKYQ_2TB_CUSTOMER_WITHOUT_MINIBOX':
+        customerCredentials = CUSTOMER.SKYQ_2TB_CUSTOMER_WITHOUT_MINIBOX;
+        break;
+      case 'SKYQ_2TB_CUSTOMER_WITH_ONE_MINIBOX':
+        customerCredentials = CUSTOMER.SKYQ_2TB_CUSTOMER_WITH_ONE_MINIBOX;
+        break;
+      case 'SKYQ_2TB_CUSTOMER_WITH_TWO_MINIBOXES':
+        customerCredentials = CUSTOMER.SKYQ_2TB_CUSTOMER_WITH_TWO_MINIBOXES;
+        break;
+      case 'SKYQ_2TB_CUSTOMER_WITH_THREE_MINIBOXES':
+        customerCredentials = CUSTOMER.SKYQ_2TB_CUSTOMER_WITH_THREE_MINIBOXES;
+        break;
+      case 'BROADBAND_OFFER_TO_CANCEL':
+        customerCredentials = CUSTOMER.BROADBAND_OFFER_TO_CANCEL;
+        break;
+      case 'FIBRE_OFFER_TO_CANCEL':
+        customerCredentials = CUSTOMER.FIBRE_OFFER_TO_CANCEL;
+        break;
+      case 'SKYQ_1TB_CUSTOMER_WITH_FOUR_MINIBOXES':
+        customerCredentials = CUSTOMER.SKYQ_1TB_CUSTOMER_WITH_FOUR_MINIBOXES;
+        break;
+      case 'SKYQ_2TB_QMS_CUSTOMER_WITH_FOUR_MINIBOXES':
+        customerCredentials = CUSTOMER.SKYQ_2TB_QMS_CUSTOMER_WITH_FOUR_MINIBOXES;
+        break;
+      case 'TRIPLE_PLAY_OFFER_TO_CANCEL':
+        customerCredentials = CUSTOMER.TRIPLE_PLAY_OFFER_TO_CANCEL;
+        break;
+      case 'TV_ELIGIBLE_TO_WINBACK':
+        customerCredentials = CUSTOMER.TV_ELIGIBLE_TO_WINBACK;
         break;
       default:
         console.log(`The subscriptionType ${subscriptionType} is invalid and returns false now`);

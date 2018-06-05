@@ -18,224 +18,222 @@ const preRegStepDefinition = function () {
 
     this.Given(/^Roi customer open the prereg page$/, done => {
         preRegPage.open('/ftth/register');
-    done();
-})
+        done();
+    })
 
     this.Given(/^clicks on the prospect button$/, done => {
         preRegPage.clickProspectButton();
-    done();
-})
+        done();
+    })
 
 
     this.Given(/^clicks on the existing button$/, done => {
         preRegPage.clickCustomerBtn();
-    done();
-})
+        done();
+    })
 
     //login to pre-reg
     this.Given(/^login using (.*) and (.*) as credanials$/, (username, password, done) => {
         loginPage.enterUsername(username);
-    loginPage.enterPassword(password);
-    loginPage.clickSignIn();
-    done();
-})
+        loginPage.enterPassword(password);
+        loginPage.clickSignIn();
+        done();
+    })
 
     this.Then(/^submits the form$/, done => {
+        browser.debug();
         preRegPage.clickSubmitBtn();
-    done();
-})
+        done();
+    })
 
 // input steps
     this.Given(/^Agent tick the (.*) radio button$/, (yesNo, done) => {
         preRegPage.radioBtn = yesNo;
-    preRegPage.isExistingCustomer();
-    done();
-})
+        preRegPage.isExistingCustomer();
+        done();
+    })
 
     //enter values
     this.Given(/^enters the following personal details here$/, (data)=> {
-        for (let i = 0; i <= data.raw()[0].length; i++)
-    {
-        const header = String(data.raw()[0][i]).trim();
-        const text = String(data.raw()[1][i]).trim();
-        switch (header) {
-            case 'firstName':
-                preRegPage.enterFirstName(text);
-                break;
+        for (let i = 0; i <= data.raw()[0].length; i++) {
+            const header = String(data.raw()[0][i]).trim();
+            const text = String(data.raw()[1][i]).trim();
+            switch (header) {
+                case 'firstName':
+                    preRegPage.enterFirstName(text);
+                    break;
 
-            case 'lastName':
-                preRegPage.enterLastName(text);
-                break;
+                case 'lastName':
+                    preRegPage.enterLastName(text);
+                    break;
 
-            case 'email':
-                preRegPage.enterEmail(text);
-                break;
+                case 'email':
+                    preRegPage.enterEmail(text);
+                    break;
 
-            case 'phone':
-                preRegPage.enterMobileNumber(text);
-                break;
+                case 'phone':
+                    preRegPage.enterMobileNumber(text);
+                    break;
 
-            case 'eircode':
-                preRegPage.enterEircode(text);
-                break;
+                case 'eircode':
+                    preRegPage.enterEircode(text);
+                    break;
+            }
         }
-    }
-})
-
+    })
 
 
 //enter values from agent side
     this.Given(/^enters the following personal details by agent$/, (data, done) => {
-        for (let i = 0; i <= data.raw()[0].length; i++)
-    {
-        const header = String(data.raw()[0][i]).trim();
-        const text = String(data.raw()[1][i]).trim();
-        switch (header) {
-            case 'agentId':
-                preRegPage.enterAgentId(text);
-                break;
+        for (let i = 0; i <= data.raw()[0].length; i++) {
+            const header = String(data.raw()[0][i]).trim();
+            const text = String(data.raw()[1][i]).trim();
+            switch (header) {
+                case 'agentId':
+                    preRegPage.enterAgentId(text);
+                    break;
 
-            case 'channel':
-                preRegPage.enterSalesChannel(text);
-                break;
+                case 'channel':
+                    preRegPage.enterSalesChannel(text);
+                    break;
 
-            case 'callType':
-                preRegPage.enterCallType(text);
-                break;
+                case 'callType':
+                    preRegPage.enterCallType(text);
+                    break;
 
-            case 'accountNumber':
-                preRegPage.enterAccountNumber(text);
-                break;
+                case 'accountNumber':
+                    preRegPage.enterAccountNumber(text);
+                    break;
 
-            case 'isExisting':
-                preRegPage.tickIsExistingCustomer(text);
-                break;
+                case 'isExisting':
+                    preRegPage.tickIsExistingCustomer(text);
+                    break;
 
-            case 'firstName':
-                preRegPage.enterFirstNameAgent(text);
-                break;
+                case 'firstName':
+                    preRegPage.enterFirstNameAgent(text);
+                    break;
 
-            case 'lastName':
-                preRegPage.enterLastNameAgent(text);
-                break;
+                case 'lastName':
+                    preRegPage.enterLastNameAgent(text);
+                    break;
 
-            case 'email':
-                preRegPage.enterEmailAgent(text);
-                break;
+                case 'email':
+                    preRegPage.enterEmailAgent(text);
+                    break;
 
-            case 'phone':
-                preRegPage.enterMobileNumberAgent(text);
-                break;
+                case 'phone':
+                    preRegPage.enterMobileNumberAgent(text);
+                    break;
 
-            case 'eircode':
-                preRegPage.enterEircodeAgent(text);
-                break;
+                case 'eircode':
+                    preRegPage.enterEircodeAgent(text);
+                    break;
+            }
         }
-    }
-    done();
-})
+        done();
+    })
 
 
     this.Given(/^enter Eircode (.*) for existing customer$/, (eircode, done) => {
         preRegPage.enterExistingCustomerEircode(eircode);
-    done();
-})
-
+        done();
+    })
 
 
 // verification and validation
 
     this.Given(/^verify the following values for the customer are invalid$/, (data, done) => {
-        for (let i = 0; i <= data.raw()[0].length; i++)
-    {
-        const header = String(data.raw()[0][i]).trim();
-        //  const text = String(data.raw()[1][i]).trim();
-        const error = String(data.raw()[1][i]).trim();
-        switch (header) {
-            case 'firstName':
-                preRegPage.verifyFirstName(error);
-                break;
+        for (let i = 0; i <= data.raw()[0].length; i++) {
+            const header = String(data.raw()[0][i]).trim();
+            //  const text = String(data.raw()[1][i]).trim();
+            const error = String(data.raw()[1][i]).trim();
+            switch (header) {
+                case 'firstName':
+                    preRegPage.verifyFirstName(error);
+                    break;
 
-            case 'lastName':
-                preRegPage.verifyLastName( error);
-                break;
+                case 'lastName':
+                    preRegPage.verifyLastName(error);
+                    break;
 
-            case 'email':
-                preRegPage.verifyEmail(error);
-                break;
+                case 'email':
+                    preRegPage.verifyEmail(error);
+                    break;
 
-            case 'phone':
-                preRegPage.verifyMobile(error);
-                break;
+                case 'phone':
+                    preRegPage.verifyMobile(error);
+                    break;
 
-            case 'eircode':
-                preRegPage.verifyEircode(error);
-                break;
+                case 'eircode':
+                    preRegPage.verifyEircode(error);
+                    break;
+            }
         }
-    }
-    done();
-})
+        done();
+    })
 
 
 // verify against the agent page
     this.Given(/^verify the following values for the agent page are valid$/, (data, done) => {
-        for (let i = 0; i <= data.raw()[0].length; i++)
-    {
-        const header = String(data.raw()[0][i]).trim();
-        const text = String(data.raw()[1][i]).trim();
-        switch (header) {
-            case 'agentId':
-                preRegPage.verifyAgentId(text);
-                break;
+        for (let i = 0; i <= data.raw()[0].length; i++) {
+            const header = String(data.raw()[0][i]).trim();
+            const text = String(data.raw()[1][i]).trim();
+            switch (header) {
+                case 'agentId':
+                    preRegPage.verifyAgentId(text);
+                    break;
 
-            case 'channel':
-                preRegPage.verifyAccountNumber(text);
-                break;
+                case 'channel':
+                    preRegPage.verifyAccountNumber(text);
+                    break;
 
-            case 'callType':
-                preRegPage.verifyCallType(text);
-                break;
+                case 'callType':
+                    preRegPage.verifyCallType(text);
+                    break;
 
-            case 'accountNumber':
-                preRegPage.verifyAccountNumber(text);
-                break;
+                case 'accountNumber':
+                    preRegPage.verifyAccountNumber(text);
+                    break;
 
-            //   case 'isExisting':
-            //       preRegPage.verify(text);
-            //       break;
+                //   case 'isExisting':
+                //       preRegPage.verify(text);
+                //       break;
 
-            case 'firstName':
-                preRegPage.verifyFirstName(text);
-                break;
+                case 'firstName':
+                    preRegPage.verifyFirstName(text);
+                    break;
 
-            case 'lastName':
-                preRegPage.verifyLastName(text);
-                break;
+                case 'lastName':
+                    preRegPage.verifyLastName(text);
+                    break;
 
-            case 'email':
-                preRegPage.verifyEmail(text);
-                break;
+                case 'email':
+                    preRegPage.verifyEmail(text);
+                    break;
 
-            case 'phone':
-                preRegPage.verifyMobile(text);
-                break;
+                case 'phone':
+                    preRegPage.verifyMobile(text);
+                    break;
 
-            case 'eircode':
-                preRegPage.verifyEircode(text);
-                break;
+                case 'eircode':
+                    preRegPage.verifyEircode(text);
+                    break;
+            }
+            done();
         }
-    }
-    done();
-})
+    })
     this.Then(/^verify message to thanks the customer (.*)$/, (thanks, done) => {
         browser.waitUntil(function () {
-        return  browser.getText(preRegPage.thanksTxt) === thanks}, 30000, "the previous page took longer than expected" );
-    done();
-})
+            console.log('+++++++++++++++++++++++++++++++++++++++++++', browser.getText(preRegPage.thanksTxt) === thanks)
+            return browser.getText(preRegPage.thanksTxt) === thanks
+        }, 300000, "the previous page took longer than expected");
+        done();
+    })
 
     this.Given(/^agent directed to the agent page$/, done => {
         preRegPage.clickAgentUrl;
-    done();
-})
+        browser.pause(3000);
+        done();
+    })
 };
 module.exports = preRegStepDefinition;
